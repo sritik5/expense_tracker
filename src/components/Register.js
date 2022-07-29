@@ -3,7 +3,7 @@ import img1 from '../components/img1.png'
 import img2 from '../components/img2.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 export default function Register() {
 
@@ -28,6 +28,15 @@ export default function Register() {
     alert("Sign up Successfull");
 }
 
+useEffect(() => 
+{
+  fetch('http://localhost:3000/users')
+  .then(response => response.json())
+  .then(data => {
+    return setUser(data);
+    
+  });
+}, [])
 
     // console.log(watch('username'));
     
@@ -40,13 +49,13 @@ export default function Register() {
                 <span>register and enjoy the service</span>
 
                 <form id={styles.form} className={styles.flex} onSubmit={handleSubmit}>
-                    <input type="text" {...register("uname")} onChange={handleForm} placeholder='username' required />
+                    <input type="text" {...register("uname")} minLength={5} onChange={handleForm} placeholder='username' required />
                     { !errorUname && <text>'Username should not be same':</text>}
                     <input type="text" {...register("name")} onChange={handleForm} placeholder='name' required/>
                     <input type="email" {...register("email")} onChange={handleForm} placeholder='email' required/>
                     <input type="password" {...register("password")} onChange={handleForm} placeholder='password' required/>
                     <input type="password" {...register("confirmpwd")} onChange={handleForm} placeholder='confirm password' required/>
-                    <input type="text" {...register("phone", { required : true, maxLength: 10 })} onChange={handleForm} placeholder='mobile number' required />
+                    <input type="text" {...register("phone")} maxLength={10} onChange={handleForm} placeholder='mobile number' required />
                     {errors.phone?.type === "required" && "Mobile Number is required"}
                     {errors.phone?.type === "maxLength" && "Max Length Exceed"}
                     <button type="submit" onSubmit={()=>handleSubmit()} className={styles.btn}>Sign In</button>
