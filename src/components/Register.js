@@ -40,15 +40,15 @@ export default function Register() {
                 <span>register and enjoy the service</span>
 
                 <form id={styles.form} className={styles.flex} onSubmit={handleSubmit}>
-                    <input type="text" {...register("username")} onChange={handleForm} placeholder='username' required />
+                    <input type="text" {...register("uname")} onChange={handleForm} placeholder='username' required />
                     { !errorUname && <text>'Username should not be same':</text>}
                     <input type="text" {...register("name")} onChange={handleForm} placeholder='name' required/>
                     <input type="email" {...register("email")} onChange={handleForm} placeholder='email' required/>
                     <input type="password" {...register("password")} onChange={handleForm} placeholder='password' required/>
                     <input type="password" {...register("confirmpwd")} onChange={handleForm} placeholder='confirm password' required/>
-                    <input type="text" {...register("mobile", { required : true, maxLength: 10 })} onChange={handleForm} placeholder='mobile number' required />
-                    {errors.mobile?.type === "required" && "Mobile Number is required"}
-                    {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
+                    <input type="text" {...register("phone", { required : true, maxLength: 10 })} onChange={handleForm} placeholder='mobile number' required />
+                    {errors.phone?.type === "required" && "Mobile Number is required"}
+                    {errors.phone?.type === "maxLength" && "Max Length Exceed"}
                     <button type="submit" onSubmit={()=>handleSubmit()} className={styles.btn}>Sign In</button>
                 </form>
             </div>
