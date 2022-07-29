@@ -1,5 +1,6 @@
 import React from 'react'
-import bgImg from '../components/registration_photo.png'
+import img1 from '../components/img1.png'
+import img2 from '../components/img2.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState } from 'react';
@@ -32,8 +33,9 @@ export default function Register() {
     
   return (
     <section>
+      
         <div className={styles.register}>
-            <div className={styles.col-1}>
+            <div className={styles.col1}>
                 <h2>Sign In</h2>
                 <span>register and enjoy the service</span>
 
@@ -50,8 +52,9 @@ export default function Register() {
                     <button type="submit" onSubmit={()=>handleSubmit()} className={styles.btn}>Sign In</button>
                 </form>
             </div>
-            <div className={styles.col-2}>
-                <img src={bgImg} alt="" /> 
+            <div className={styles.col2}>
+            <h2 className={styles.head}>TRACK YOUR EXPENSE.</h2>
+            <img  src={img1} alt="" />
             </div>
         </div>
     </section>
