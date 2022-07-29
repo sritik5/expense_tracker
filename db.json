@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "ritik",
+      "uname": "ritik10",
+      "pw": "123456",
+      "email": "ritik@gmail.com",
+      "phone": 1234567890
+    },
+    {
+      "id": 2,
+      "name": "shreyas",
+      "uname": "shreyas1",
+      "pw": "123456",
+      "email": "sd@gmail.com",
+      "phone": 1234567891
+    }
+  ],
+
+  "transaction": [
+    {
+      "uname1": "shreyas",
+      "uname2": "ritik10",
+      "data": [
+        {
+          "desc": "Food",
+          "money": 1000
+        }
+      ],
+      "exp_u1": 1000,
+      "exp_u2": 0,
+      "settle": false
+    }
+  ]
+}
