@@ -23,6 +23,104 @@
       "password": "qwerty",
       "phone": "1234567890",
       "id": 5
+    },
+    {
+      "uname": "samp",
+      "name": "Samprada",
+      "email": "sudeshna@gmail.com",
+      "password": "asdf",
+      "confirmpwd": "as",
+      "phone": "4567",
+      "id": 6
+    },
+    {
+      "uname": "Samprada",
+      "name": "Sam",
+      "email": "sam@g.c",
+      "password": "Samp",
+      "confirmpwd": "Sa",
+      "phone": "123",
+      "id": 7
+    },
+    {
+      "uname": "a",
+      "name": "b",
+      "email": "a@g",
+      "password": "s",
+      "confirmpwd": "a",
+      "phone": "9",
+      "id": 8
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "ritik",
+        "uname": "ritik10",
+        "pw": "123456",
+        "email": "ritik@gmail.com",
+        "phone": 1234567890
+      },
+      "1": {
+        "id": 2,
+        "name": "shreyas",
+        "uname": "shreyas1",
+        "pw": "123456",
+        "email": "sd@gmail.com",
+        "phone": 1234567891
+      },
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": [],
+      "11": [],
+      "12": {
+        "username": "ritik",
+        "name": "shah",
+        "email": "ritik@g.c",
+        "password": "qwerty",
+        "confirmpwd": "qwerty",
+        "mobile": "1234567890",
+        "id": 5
+      },
+      "13": {
+        "uname": "samp",
+        "name": "Samprada",
+        "email": "sudeshna@gmail.com",
+        "password": "asdf",
+        "confirmpwd": "as",
+        "phone": "4567",
+        "id": 6
+      },
+      "14": {
+        "uname": "Samprada",
+        "name": "Sam",
+        "email": "sam@g.c",
+        "password": "Samp",
+        "confirmpwd": "Sa",
+        "phone": "123",
+        "id": 7
+      },
+      "15": {
+        "uname": "a",
+        "name": "b",
+        "email": "a@g",
+        "password": "s",
+        "confirmpwd": "a",
+        "phone": "9",
+        "id": 8
+      },
+      "uname": "ritik10",
+      "name": "ritik",
+      "email": "riitik1234@gmail.com",
+      "password": "12345678",
+      "confirmpwd": "12345678",
+      "phone": "1234567890",
+      "id": 9
     }
   ],
   "transaction": [
