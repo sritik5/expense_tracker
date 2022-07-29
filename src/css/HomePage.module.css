@@ -1,5 +1,124 @@
-.userButton {
-    color: red;
-    display: flex;
-    float: left;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif  ;
 }
+ 
+.line{
+    background-color: rgb(212, 212, 212);;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    margin: 0 140px 0 140px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px;
+}
+
+.heading{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.navele{
+    display: flex;
+    justify-content: center;
+    padding-left: 1100px;
+}
+.navText{
+   
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(56, 56, 56);
+    
+}
+
+
+.navText:hover{
+    font-weight: 700;
+
+}
+
+img{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.sections{
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+    height:1000px;
+    
+}
+
+
+.left{
+    background-color: rgb(255, 255, 255);
+    display: flexbox;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 30px;
+    border-radius: 20px;
+    width: 600px;
+    
+
+}
+
+.right{
+    background-color: rgb(255, 255, 255);
+    display: flexbox;
+    background-color: rgb(212, 212, 212);
+    margin: 30px;
+    border-radius: 20px;
+    
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.list:hover{
+   
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.leftname{
+    margin-top: 40px;
+    font-size: 1.2em;
+
+}
+
+.rightamt{
+    margin-top: 40px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: brown;
+
+}
+span{
+    font-weight: 400;
+    color: tomato;
+}
+
+.imageleft{
+   display: flex;
+   margin-top: 10px;
+   margin-left:60px;
+}
+
+.lefthead{
+    display: flex;
+    margin-left: 130px;
+    margin-top: -45px;
+}
+
