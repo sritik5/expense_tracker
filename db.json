@@ -16,23 +16,12 @@
       "email": "sd@gmail.com",
       "phone": 1234567891
     },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
     {
-      "username": "ritik",
+      "uname": "ritik",
       "name": "shah",
       "email": "ritik@g.c",
       "password": "qwerty",
-      "confirmpwd": "qwerty",
-      "mobile": "1234567890",
+      "phone": "1234567890",
       "id": 5
     },
     {
