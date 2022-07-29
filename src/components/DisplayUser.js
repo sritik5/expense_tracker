@@ -7,7 +7,7 @@ export default function DisplayUser({user}) {
     return (
         <div>
             {
-                <button className={styles.userButton} onClick={()=>console.log(user)}>{user.uname}</button>
+                <p ></p>
             }
         </div>
   )
