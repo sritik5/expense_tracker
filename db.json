@@ -15,9 +15,27 @@
       "pw": "123456",
       "email": "sd@gmail.com",
       "phone": 1234567891
+    },
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    {
+      "username": "ritik",
+      "name": "shah",
+      "email": "ritik@g.c",
+      "password": "qwerty",
+      "confirmpwd": "qwerty",
+      "mobile": "1234567890",
+      "id": 5
     }
   ],
-
   "transaction": [
     {
       "uname1": "shreyas",
