@@ -1,5 +1,5 @@
 import React from 'react'
-// import bgImg from '../assets/img1.jpg';
+import bgImg from '../components/registration_photo.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 export default function Form() {
@@ -18,8 +18,10 @@ export default function Form() {
 
                 <form id={styles.form} className={styles.flex} onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" {...register("username")} placeholder='username' />
-                    <input type="text" {...register("password")} placeholder='password' />
-                    <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
+                    <input type="text" {...register("name")} placeholder='name' />
+                    <input type="email" {...register("email")} placeholder='email' />
+                    <input type="password" {...register("password")} placeholder='password' />
+                    <input type="password" {...register("confirmpwd")} placeholder='confirm password' />
                     <input type="text" {...register("mobile", { required : true, maxLength: 10 })} placeholder='mobile number' />
                     {errors.mobile?.type === "required" && "Mobile Number is required"}
                     {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
@@ -28,7 +30,7 @@ export default function Form() {
 
             </div>
             <div className={styles.col-2}>
-                {/* <img src={bgImg} alt="" /> */}
+                <img src={bgImg} alt="" /> 
             </div>
         </div>
     </section>
