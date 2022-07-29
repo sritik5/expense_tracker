@@ -3,6 +3,11 @@ import styles from '../css/Register.module.css'
 
 export default function Register() {
   return (
-    <div>Register</div>
+    <div>
+
+
+
+
+    </div>
   )
 }
