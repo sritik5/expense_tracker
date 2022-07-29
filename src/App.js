@@ -10,6 +10,7 @@ function App() {
   const [auth,setAuth] = useState(false);
   
   useEffect(() => {
+    console.log("App.js file")
     localStorage.getItem('Username') && setAuth(true) 
   },[]);
 

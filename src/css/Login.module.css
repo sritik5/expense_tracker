@@ -71,12 +71,12 @@ section{
 }
 
 
-.register .col-1{
+.register .col1{
   margin: auto;
   padding: 3em 0;
 }
 
-.register .col-2 img{
+.register .col2 img{
   width: 480px;
   height: 100%;
   object-fit: cover;
@@ -87,7 +87,7 @@ section{
 }
 
 @media screen and (min-width: 860px)  {
-  .register .col-2 img{
+  .register .col2 img{
     display: initial;
   }
 }

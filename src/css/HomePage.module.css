@@ -5,42 +5,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif  ;
 }
- 
-.line{
-    background-color: rgb(212, 212, 212);;
-    border-radius: 40px;
-    padding: 10px;
-    display: flex;
-    margin: 0 140px 0 140px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-top: 20px;
-}
 
-.heading{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 15px;
-}
-
-.navele{
-    display: flex;
-    justify-content: center;
-    padding-left: 1100px;
-}
-.navText{
-   
-    padding: 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: rgb(56, 56, 56);
-    
-}
-
-
-.navText:hover{
-    font-weight: 700;
-
-}
 
 img{
     object-fit: cover;
@@ -100,7 +65,7 @@ img{
 
 .rightamt{
     margin-top: 40px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 600;
     color: brown;
 
