@@ -33,16 +33,19 @@ const handleForm= ((e) => {
 const  handleSubmit = ((e) => {
   e.preventDefault();
   const checkCredentials =(data => {
-    if(data.uname === loginUser.uname && data.pw === loginUser.password) {
+    console.log("data pw: ",data.pw)
+    console.log("login user pw: ",loginUser.pw)
+    if(data.uname === loginUser.uname && data.pw === loginUser.pw)
       localStorage.setItem('Username',loginUser.uname);
-    }
   })
   user && user.forEach(data => checkCredentials(data))
   if(localStorage.getItem('Username')) {
+
     navigate('/');
     window.location.reload(false);
   }
   else {
+    console.log("login user uname:",loginUser.uname)
     alert("Invalid Credentials");
   }
 })
