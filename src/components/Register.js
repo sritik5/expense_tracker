@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 export default function Form() {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, watch, z: { errors } } = useForm()
+ onSubmit = data => console.log(data);
 
     // console.log(watch('username'));
     
