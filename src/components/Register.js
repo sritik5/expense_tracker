@@ -1,6 +1,5 @@
 import React from 'react'
 import img1 from '../components/img1.png'
-// import img2 from '../components/img2.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState,useEffect } from 'react';
@@ -9,22 +8,24 @@ import { Link } from 'react-router-dom';
 export default function Register() {
 
   const [errorUname, setErrorUname] = useState(true);
-  const [user, setUser] = useState([])
-  const { register, formState: { errors } } = useForm()
+  const [formData, setFormData] = useState({});
+  const [user, setUser] = useState([]);
+  const { register, formState: { errors } } = useForm();
 
   const handleForm= (e) => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value })
+    setFormData({ ...formData, [name]: value })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     console.log(user)
     fetch(`http://localhost:3000/users`, {
         method: "POST",
-        body: JSON.stringify(user),
+        body: JSON.stringify(formData),
         headers: { "content-type": "application/json" }
     })
-    alert("Sign up Successfull");
+    // alert("Sign up Successfull");
   }
 
   useEffect(() => 
@@ -47,8 +48,8 @@ export default function Register() {
             { !errorUname && <text>'Username should not be same':</text>}
             <input type="text" {...register("name")} onChange={handleForm} placeholder='name' required/>
             <input type="email" {...register("email")} onChange={handleForm} placeholder='email' required/>
-            <input type="password" {...register("password")} onChange={handleForm} placeholder='password' required/>
-            <input type="password" {...register("confirmpwd")} onChange={handleForm} placeholder='confirm password' required/>
+            <input type="password" {...register("pw")} onChange={handleForm} placeholder='password' required/>
+            <input type="password" {...register("confirmpw")} onChange={handleForm} placeholder='confirm password' required/>
             <input type="text" {...register("phone")} maxLength={10} onChange={handleForm} placeholder='mobile number' required />
             {errors.phone?.type === "required" && "Mobile Number is required"}
             {errors.phone?.type === "maxLength" && "Max Length Exceed"}
