@@ -17,50 +17,17 @@
       "phone": 1234567891
     },
     {
-      "uname": "ritik",
-      "name": "shah",
-      "email": "ritik@g.c",
+      "uname": "parth",
+      "name": "singh",
+      "email": "parth@g.c",
       "password": "qwerty",
       "phone": "1234567800",
       "id": 3
-    },
-    {
-      "0": {
-        "id": 1,
-        "name": "ritik",
-        "uname": "ritik10",
-        "pw": "123456",
-        "email": "ritik@gmail.com",
-        "phone": 1234567890
-      },
-      "1": {
-        "id": 2,
-        "name": "shreyas",
-        "uname": "shreyas1",
-        "pw": "123456",
-        "email": "sd@gmail.com",
-        "phone": 1234567891
-      },
-      "2": {
-        "uname": "ritik",
-        "name": "shah",
-        "email": "ritik@g.c",
-        "password": "qwerty",
-        "phone": "1234567800",
-        "id": 3
-      },
-      "uname": "Varun24",
-      "name": "Varun Dhawan",
-      "email": "varun@gmail",
-      "password": "1234567",
-      "confirmpwd": "1234567",
-      "phone": "1234567891",
-      "id": 4
     }
   ],
   "transaction": [
     {
-      "uname1": "shreyas",
+      "uname1": "shreyas1",
       "uname2": "ritik10",
       "data": [
         {
@@ -77,6 +44,28 @@
       "exp_u1": 5000,
       "exp_u2": 1000,
       "settle": false
+    },
+
+    {
+      "uname1": "ritik10",
+      "uname2": "parth",
+      "data": [
+        {
+          "desc": "Food",
+          "money": 2000,
+          "paid": "parth"
+        },
+        {
+          "desc": "travel",
+          "money": 3000,
+          "paid": "ritik10"
+        }
+      ],
+      "exp_u1": 3000,
+      "exp_u2": 2000,
+      "settle": false
     }
+
+
   ]
 }

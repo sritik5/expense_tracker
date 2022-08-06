@@ -1,6 +1,5 @@
 import React from 'react'
 import img1 from '../components/img1.png'
-// import img2 from '../components/img2.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState,useEffect } from 'react';
@@ -10,22 +9,24 @@ import { ReactComponent as YourSvg } from '../components/your-svg.svg';
 export default function Register() {
 
   const [errorUname, setErrorUname] = useState(true);
-  const [user, setUser] = useState([])
-  const { register, formState: { errors } } = useForm()
+  const [formData, setFormData] = useState({});
+  const [user, setUser] = useState([]);
+  const { register, formState: { errors } } = useForm();
 
   const handleForm= (e) => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value })
+    setFormData({ ...formData, [name]: value })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     console.log(user)
     fetch(`http://localhost:3000/users`, {
         method: "POST",
-        body: JSON.stringify(user),
+        body: JSON.stringify(formData),
         headers: { "content-type": "application/json" }
     })
-    alert("Sign up Successfull");
+    // alert("Sign up Successfull");
   }
 
   useEffect(() => 
