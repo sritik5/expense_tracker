@@ -3,13 +3,14 @@ import styles from '../css/HomePage.module.css'
 import { Link } from 'react-router-dom'
 import DisplayUser from './DisplayUser';
 import Header from './Header';
+import Expenses from './Expenses';
 
 
 export default function HomePage() {
 
-  const [isLogin, setIsLogin] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState("ritik");
   const [users, setUsers] = useState([]);
+  const [selectedUser, setSelectedUser] = useState();
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
@@ -38,9 +39,8 @@ export default function HomePage() {
               if(loggedInUser !== u.uname)
                 return (
                   <div className={styles.list} key={u.id}>
-
                     <div className={styles.leftname}>
-                      <p onClick={()=>console.log(u.uname)}>{u.uname}</p>
+                      <p onClick={()=>setSelectedUser(u.uname)}>{u.uname}</p>
                     </div>
                     <div className={styles.rightamt}>
                       <p>$500</p>
@@ -57,7 +57,10 @@ export default function HomePage() {
         </div>
 
         <div className={styles.right}>
-          <h1>friends name</h1>
+          {
+            selectedUser && 
+            <Expenses user1={loggedInUser} user2={selectedUser}/>
+          }
         </div>
 
       </div>

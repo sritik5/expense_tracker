@@ -1,6 +1,6 @@
 import React from 'react'
 import img1 from '../components/img1.png'
-import img2 from '../components/img2.png'
+// import img2 from '../components/img2.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState,useEffect } from 'react';
@@ -10,15 +10,13 @@ export default function Register() {
 
   const [errorUname, setErrorUname] = useState(true);
   const [user, setUser] = useState([])
+  const { register, formState: { errors } } = useForm()
 
-    const { register, formState: { errors } } = useForm()
-
-    const handleForm= (e) => {
-      const { name, value } = e.target;
-      setUser({ ...user, [name]: value })
-
-     
+  const handleForm= (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value })
   }
+
   const handleSubmit = () => {
     console.log(user)
     fetch(`http://localhost:3000/users`, {
@@ -27,19 +25,16 @@ export default function Register() {
         headers: { "content-type": "application/json" }
     })
     alert("Sign up Successfull");
-}
+  }
 
-useEffect(() => 
-{
-  fetch('http://localhost:3000/users')
-  .then(response => response.json())
-  .then(data => {
-    return setUser(data);
-    
-  });
-}, [])
+  useEffect(() => 
+  {
+    fetch('http://localhost:3000/users')
+    .then(response => response.json())
+    .then(data => setUser(data));
+  }, [])
 
-    // console.log(watch('username'));
+  // console.log(watch('username'));
     
   return (
     <section>
@@ -47,7 +42,6 @@ useEffect(() =>
         <div className={styles.col1}>
           <h2>Sign In</h2>
           <span>register and enjoy the service</span>
-
           <form id={styles.form} className={styles.flex} onSubmit={handleSubmit}>
             <input type="text" {...register("uname")} minLength={5} onChange={handleForm} placeholder='username' required />
             { !errorUname && <text>'Username should not be same':</text>}
@@ -58,7 +52,7 @@ useEffect(() =>
             <input type="text" {...register("phone")} maxLength={10} onChange={handleForm} placeholder='mobile number' required />
             {errors.phone?.type === "required" && "Mobile Number is required"}
             {errors.phone?.type === "maxLength" && "Max Length Exceed"}
-            <button type="submit" onSubmit={()=>handleSubmit()} className={styles.btn}>Sign In</button>
+            <button type="submit" className={styles.btn}>Sign In</button>
           </form>
           <Link to="/login">Already Registered? Login</Link>
         </div>
