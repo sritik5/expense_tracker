@@ -32,11 +32,17 @@
       "data": [
         {
           "desc": "Food",
-          "money": 1000
+          "money": 1000,
+          "paid": "ritik10"
+        },
+        {
+          "desc": "travel",
+          "money": 5000,
+          "paid": "shreyas"
         }
       ],
-      "exp_u1": 1000,
-      "exp_u2": 0,
+      "exp_u1": 5000,
+      "exp_u2": 1000,
       "settle": false
     }
   ]
