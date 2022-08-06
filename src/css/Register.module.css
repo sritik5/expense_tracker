@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-  font-family: 'Poppins',sans-serif;
-}
 
-body{
- background-color: #323737;
-  
-}
 
 
 
@@ -22,6 +14,8 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0 30px 0;
+  width: 100%;
 }
 
 .register{
@@ -36,9 +30,8 @@ section{
   background-color: white;
 }
 
-.register span{
-  color: #adb5bd;
-}
+
+
 
 #form{
   max-width: 320px;
@@ -56,12 +49,24 @@ section{
 }
 
  .btn{
-  background-color:#44b2a5;
+  background-color:#4285F4;
   color: #e9ecef;
   font-size: 1em;
   cursor: pointer;
+  border-radius: 3px;
+  border: none;
 
 }
+
+h2{
+  margin-bottom: 10px;
+}
+
+.subhead{
+  color: #adb5bd;
+  font-weight: 400;
+  padding-top:  20px;
+} 
 
 
 
@@ -80,7 +85,6 @@ section{
 .register .col2 img{
   width: 480px;
   height: 100%;
-  object-fit: cover;
   align-self: flex-end;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -91,9 +95,45 @@ section{
   font-size: 2.3em;
   font-weight: 900;
   color: #323737;
-  text-align: left;
+  text-align: center;
+  padding-right: 50px;
 
 }
+
+.alreadyreg{
+  text-decoration: none;
+  color:#323737;
+  padding-top: 10px;
+}
+
+.alreadyreg:hover{
+  font-weight: 600;
+}
+
+.alreadyreg span{
+  padding: 6px;
+  background-color:  #323737;
+  border: none;
+  color: aliceblue;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-left: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+span:hover{
+  border: 2px solid #4285F4;
+  background:none;
+  color: #323737;
+}
+
+.reginput{
+  border-radius: 3px;
+  height: 20px;
+}
+
 
 @media screen and (min-width: 860px)  {
   .register .col2 img{

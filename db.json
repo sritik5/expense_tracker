@@ -23,24 +23,6 @@
       "password": "qwerty",
       "phone": "1234567800",
       "id": 3
-    },
-    {
-      "uname": "ritik123",
-      "name": "ritik shah",
-      "email": "ritik@gmail.com",
-      "pw": "123456",
-      "confirmpw": "123456",
-      "phone": "1234567890",
-      "id": 4
-    },
-    {
-      "uname": "ritik10",
-      "name": "ritik",
-      "email": "ritik@gmail.com",
-      "pw": "123456",
-      "confirmpw": "123456",
-      "phone": "1234567890",
-      "id": 5
     }
   ],
   "transaction": [

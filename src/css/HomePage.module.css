@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.headwel{
+    font-weight: 400;
+    margin: 40px 0 5px 0 ;
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif  ;
 }
-
-
+.spanheadwel{
+    font-weight: 600;
+    font-size: 3.2em;
+    color: 	#4285F4;;
+}
 img{
     object-fit: cover;
     width: 40px;
@@ -19,35 +20,56 @@ img{
     
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap:50px;
-    height:1000px;
+    gap:1px;
+    height: 450px;
+    z-index: 1;
+    margin-top: 30px;
+    
     
 }
 
 
 .left{
-    background-color: rgb(255, 255, 255);
+
     display: flexbox;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin: 30px;
     border-radius: 20px;
     width: 600px;
-    
+}
 
+.lefthead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    margin: 20px 0 20px 0;
+}
+span,h1{
+    background: none;
+    padding-right: 10px;
+}
+h1{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+span{
+    font-weight: 600;
+    color: rgb(42, 42, 42);
 }
 
 .right{
-    background-color: rgb(255, 255, 255);
-    display: flexbox;
-    background-color: rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
     margin: 30px;
     border-radius: 20px;
-    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .list{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    background:none;
     
 }
 
@@ -60,7 +82,71 @@ img{
 .leftname{
     margin-top: 40px;
     font-size: 1.2em;
+    background:none;
+}
 
+p{
+    background: none;
+}
+
+.totalexp{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    margin: 150px 0 0 0;
+    border-radius: 10px;
+    width: 200px;
+    padding: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.buttons{
+    background: none;
+    position: absolute;
+    margin: 250px 0 0 0;
+    border-radius: 10px;
+    width: 200px;
+    padding: 30px;
+    
+}
+
+.btn1{
+    padding: 15px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    border:2px solid #4285F4;
+    font-size: 0.9em;
+}
+
+.btn1:hover{
+    border:3px solid #4285F4;
+}
+
+.btn1:active{
+    border: 3px solid rgb(56, 56, 56);    
+}
+
+
+.btn2:hover{
+    background-color: tomato;    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.btn2:active{
+    background-color: rgb(56, 56, 56);    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    font-size: 1.5em;
+}
+
+.btn2{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 20px;
+    background-color: #4285F4;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .rightamt{
@@ -68,22 +154,20 @@ img{
     font-size: 1.2em;
     font-weight: 600;
     color: brown;
+    background: none;
 
 }
-span{
-    font-weight: 400;
-    color: tomato;
+
+.rightname{
+    background: none;
 }
 
-.imageleft{
-   display: flex;
-   margin-top: 10px;
-   margin-left:60px;
+.rightcont{
+    background: none;
+    border-radius: 20px;
 }
 
-.lefthead{
-    display: flex;
-    margin-left: 130px;
-    margin-top: -45px;
-}
+
+
+
 
