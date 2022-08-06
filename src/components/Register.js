@@ -3,7 +3,7 @@ import img1 from '../components/img1.png'
 import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Register() {
 
@@ -11,6 +11,7 @@ export default function Register() {
   const [formData, setFormData] = useState({});
   const [user, setUser] = useState([]);
   const { register, formState: { errors } } = useForm();
+  const navigate = useNavigate()
 
   const handleForm= (e) => {
     const { name, value } = e.target;
@@ -25,7 +26,8 @@ export default function Register() {
         body: JSON.stringify(formData),
         headers: { "content-type": "application/json" }
     })
-    // alert("Sign up Successfull");
+    alert("Sign up Successfull");
+    navigate('/login');
   }
 
   useEffect(() => 
