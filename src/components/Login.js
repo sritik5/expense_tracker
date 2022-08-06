@@ -3,6 +3,7 @@ import styles from "../css/Login.module.css";
 import bgImg from '../components/registration_photo.png'
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from "react-router-dom";
+import { ReactComponent as Loginsvg } from '../components/login.svg';
 
 
 export default function Login() {
@@ -81,11 +82,14 @@ const  handleSubmit = ((e) => {
 
             <button className={styles.btn}> Login</button>
           </form>
-          <Link to="/register">New User? Register</Link>
+          <Link className={styles.newuserreg} to="/register">New User? <span className={styles.spanreg}>Register</span></Link>
         </div>
         <div className={styles.col2}>
-          <img src={bgImg} alt="" />
-        </div>
+          <h1>Authentication</h1>
+          <div className={styles.loginimg}>
+          < Loginsvg />
+          </div>
+                 </div>
       </div>
     </section>
   );

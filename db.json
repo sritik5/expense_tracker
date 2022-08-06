@@ -23,6 +23,39 @@
       "password": "qwerty",
       "phone": "1234567800",
       "id": 3
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "ritik",
+        "uname": "ritik10",
+        "pw": "123456",
+        "email": "ritik@gmail.com",
+        "phone": 1234567890
+      },
+      "1": {
+        "id": 2,
+        "name": "shreyas",
+        "uname": "shreyas1",
+        "pw": "123456",
+        "email": "sd@gmail.com",
+        "phone": 1234567891
+      },
+      "2": {
+        "uname": "ritik",
+        "name": "shah",
+        "email": "ritik@g.c",
+        "password": "qwerty",
+        "phone": "1234567800",
+        "id": 3
+      },
+      "uname": "Varun24",
+      "name": "Varun Dhawan",
+      "email": "varun@gmail",
+      "password": "1234567",
+      "confirmpwd": "1234567",
+      "phone": "1234567891",
+      "id": 4
     }
   ],
   "transaction": [

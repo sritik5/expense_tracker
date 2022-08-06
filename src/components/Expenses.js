@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import styles from '../css/Expenses.module.css'
 export default function Expenses({user1, user2}) {
 
     const [transactions, setTransactions] = useState();
@@ -32,10 +32,10 @@ export default function Expenses({user1, user2}) {
 
     return (
         <div>
-            <h1>{user2}</h1>
+            <h1 className={styles.righthead}><span>Your expense with</span>{user2}</h1>
             {
                 userTransactions &&
-                userTransactions.map((t,index) => <h3 key={index}>{t.desc} {t.money} {t.paid}</h3>)
+                userTransactions.map((t,index) => <h3  className={styles.rightlist} key={index}><span>{t.desc}: </span> ${t.money} paid by {t.paid}</h3>)
             }
         </div>
   )

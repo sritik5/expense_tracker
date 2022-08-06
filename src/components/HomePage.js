@@ -26,11 +26,13 @@ export default function HomePage() {
   return (
     <div>
       <Header/>
+      <h1 className={styles.headwel}>Welcome to the</h1>
+      <span className={styles.spanheadwel}>Expense Tracker</span>
 
       <div className={styles.sections}>
         <div className={styles.left}>
-          <span className={styles.imageleft}><img src='https://images.unsplash.com/photo-1585670210693-e7fdd16b142e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80'></img></span>
           <div className={styles.lefthead}>
+          <span className={styles.imageleft}><img src='https://images.unsplash.com/photo-1567324216289-97cc4134f626?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80 '></img></span>  
             <h1>Welcome,<span>&nbsp;{loggedInUser}</span></h1>
           </div>
           {
@@ -58,8 +60,24 @@ export default function HomePage() {
 
         <div className={styles.right}>
           {
+            
             selectedUser && 
-            <Expenses user1={loggedInUser} user2={selectedUser}/>
+            <>
+            <div className={styles.rightcont}>
+            <p className={styles.rightname}><Expenses user1={loggedInUser} user2={selectedUser}/></p>
+            </div>
+             <div className={styles.totalexp}>
+              <h1>total</h1>
+
+             </div>
+             <div className={styles.buttons}>
+              <button className={styles.btn1}>Settle Up</button>
+              <button className={styles.btn2}>+</button>
+
+
+             </div>
+             </>
+
           }
         </div>
 
