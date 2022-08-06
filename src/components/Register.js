@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import styles from '../css/Register.module.css'
 import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { ReactComponent as YourSvg } from '../components/your-svg.svg';
 
 export default function Register() {
 
@@ -42,24 +43,24 @@ export default function Register() {
       <div className={styles.register}>
         <div className={styles.col1}>
           <h2>Sign In</h2>
-          <span>register and enjoy the service</span>
+          <span className={styles.subhead}>register and enjoy the service</span>
           <form id={styles.form} className={styles.flex} onSubmit={handleSubmit}>
-            <input type="text" {...register("uname")} minLength={5} onChange={handleForm} placeholder='username' required />
+            <input type="text" className={styles.reginput} {...register("uname")} minLength={5} onChange={handleForm} placeholder='username' required />
             { !errorUname && <text>'Username should not be same':</text>}
-            <input type="text" {...register("name")} onChange={handleForm} placeholder='name' required/>
-            <input type="email" {...register("email")} onChange={handleForm} placeholder='email' required/>
-            <input type="password" {...register("pw")} onChange={handleForm} placeholder='password' required/>
-            <input type="password" {...register("confirmpw")} onChange={handleForm} placeholder='confirm password' required/>
-            <input type="text" {...register("phone")} maxLength={10} onChange={handleForm} placeholder='mobile number' required />
+            <input type="text" className={styles.reginput} {...register("name")} onChange={handleForm} placeholder='name' required/>
+            <input type="email" className={styles.reginput} {...register("email")} onChange={handleForm} placeholder='email' required/>
+            <input type="password" className={styles.reginput} {...register("password")} onChange={handleForm} placeholder='password' required/>
+            <input type="password" className={styles.reginput} {...register("confirmpwd")} onChange={handleForm} placeholder='confirm password' required/>
+            <input type="text" className={styles.reginput} {...register("phone")} maxLength={10} onChange={handleForm} placeholder='mobile number' required />
             {errors.phone?.type === "required" && "Mobile Number is required"}
             {errors.phone?.type === "maxLength" && "Max Length Exceed"}
             <button type="submit" className={styles.btn}>Sign In</button>
           </form>
-          <Link to="/login">Already Registered? Login</Link>
+          <Link  className={styles.alreadyreg} to="/login">Already Registered? <span >Login</span> </Link>
         </div>
         <div className={styles.col2}>
           <h2 className={styles.head}>TRACK YOUR EXPENSE.</h2>
-          <img  src={img1} alt="" />
+          <YourSvg />
         </div>
       </div>
     </section>

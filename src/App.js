@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1>EXPENSE TRACKER APP</h1>
       <Routes>
         <Route path='/' element={ auth ? <HomePage/> : <Register/>}/>
         <Route path='/register' index element={<Register/>}/>
